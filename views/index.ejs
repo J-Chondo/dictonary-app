@@ -3,12 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dictonary</title>
+    <title>Dictionary</title>
 
 <!-- google fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Titan+One&display=swap"
-
-<!-- stylesheet -->
-<link rel="stylesheet" href="styles/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<!-- stylesheets -->
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
+
+    <audio src="" id="sound"></audio>
+
+    <div class="container">
+        <div class="search-box">
+                <form action="/weather" method="get">
+                    <input type="text" placeholder="Type the word here.." id="inp-word" />
+                  <button type="submit" >Search</button>
+                </form>
+        </div>
+        <div class="results">
+            <div class="word">
+                <h3>sample</h3>
+                <button class="btn">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+            </div>
+            <div class="details">
+                <p>pos</p>
+                <p>/sample/</p>
+            </div>
+            <p class="word-meaning">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, quaerat. Omnis quas blanditiis nihil accusamus 
+            </p>
+            <p class="word-example">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error ullam temporibus expedita quas inventore laudantium modi, 
+            </p>
+        </div>
+    </div>
+    
+</body>
+</html>
