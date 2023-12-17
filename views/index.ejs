@@ -16,29 +16,31 @@
 
     <div class="container">
         <div class="search-box">
-                <form action="/weather" method="get">
+                <form action="/search" method="get">
                     <input type="text" placeholder="Type the word here.." id="inp-word" />
                   <button type="submit" >Search</button>
                 </form>
         </div>
+        <% if (error) { %>
+            <p class="error"><%= error %></p>
+            <% } else if (word) { %>
         <div class="results">
             <div class="word">
-                <h3>sample</h3>
-                <button class="btn">
-                    <i class="fas fa-volume-up"></i>
-                </button>
+                <h3><%= inpWord %></h3>
             </div>
             <div class="details">
-                <p>pos</p>
-                <p>/sample/</p>
+                <p><%= word[0].meanings[0].partOfSpeech %></p>
+                <p><%= word[0].phonetic %>/</p>
             </div>
             <p class="word-meaning">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, quaerat. Omnis quas blanditiis nihil accusamus 
+                 <%=  word[0].meanings[0].definitions[0].definition %>
             </p>
             <p class="word-example">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error ullam temporibus expedita quas inventore laudantium modi, 
+              <%=  word[0].meanings[0].definitions[0].example || "" %> 
             </p>
         </div>
+        <% } %>
+         
     </div>
     
 </body>
